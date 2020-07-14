@@ -50,7 +50,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes Total Low
+    //Violent Crimes Low Total
     public static int vCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
         int vCrimeTotalLo = data[0].getViolentCrimeTotal();
@@ -125,7 +125,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes High Total
+    //Murder High Total
     public static int mCrimeTotalHi(UsCrimeClass[] data) {
         int year = 0;
         int mCrimeTotalHi = 0;
@@ -138,7 +138,7 @@ public class UsCrimeObject {
         return mCrimeTotalHi;
     }
 
-    //Violent Crimes Total Low Year
+    //Murder Total Low Year
     public static int mCrimeTotalYearLo(UsCrimeClass[] data) {
         int year = 0;
         float mCrimeTotalYearLo = data[0].getMurderTotal();
@@ -150,7 +150,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes Total Low
+    //Murder Total Low
     public static int mCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
         int mCrimeTotalLo = data[0].getMurderTotal();
@@ -163,7 +163,7 @@ public class UsCrimeObject {
         return mCrimeTotalLo;
     }
 
-    //Violent Crimes Rate High Year
+    //Murder Rate High Year
     public static int mCrimeRateYearHi(UsCrimeClass[] data) {
         int year = 0;
         float mCrimeRateYearHi = 0;
@@ -175,7 +175,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes Rate high
+    //Murder Rate high
     public static float mCrimeRateHi(UsCrimeClass[] data) {
         int year = 0;
         float mCrimeRateHi = 0;
@@ -188,7 +188,7 @@ public class UsCrimeObject {
         return mCrimeRateHi;
     }
 
-    //Violent Crimes Rate low year
+    //Murder Rate low year
     public static int mCrimeRateYearLo(UsCrimeClass[] data) {
         int year = 0;
         float mCrimeRateYearLo = data[0].getMurderRate();
@@ -200,7 +200,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes Rate Low
+    //Murder Rate Low
     public static float mCrimeRateLo(UsCrimeClass[] data) {
         int year = 0;
         float mCrimeRateLo = data[0].getMurderRate();
@@ -225,7 +225,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes High Total
+    //Rape Crimes High Total
     public static int rCrimeTotalHi(UsCrimeClass[] data) {
         int year = 0;
         int rCrimeTotalHi = 0;
@@ -238,7 +238,7 @@ public class UsCrimeObject {
         return rCrimeTotalHi;
     }
 
-    //Violent Crimes Total Low Year
+    //Rape Crimes Total Low Year
     public static int rCrimeTotalYearLo(UsCrimeClass[] data) {
         int year = 0;
         float rCrimeTotalYearLo = data[0].getRapeTotal();
@@ -250,7 +250,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes Total Low
+    //Rape Crimes Total Low
     public static int rCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
         int rCrimeTotalLo = data[0].getRapeTotal();
@@ -263,7 +263,7 @@ public class UsCrimeObject {
         return rCrimeTotalLo;
     }
 
-    //Violent Crimes Rate High Year
+    //Rape Crimes Rate High Year
     public static int rCrimeRateYearHi(UsCrimeClass[] data) {
         int year = 0;
         float rCrimeRateYearHi = 0;
@@ -275,7 +275,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes Rate high
+    //Rape Crimes Rate high
     public static float rCrimeRateHi(UsCrimeClass[] data) {
         int year = 0;
         float rCrimeRateHi = 0;
@@ -288,7 +288,7 @@ public class UsCrimeObject {
         return rCrimeRateHi;
     }
 
-    //Violent Crimes Rate low year
+    //Rape Crimes Rate low year
     public static int rCrimeRateYearLo(UsCrimeClass[] data) {
         int year = 0;
         float rCrimeRateYearLo = data[0].getRapeRate();
@@ -300,7 +300,7 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes Rate Low
+    //Rape Crimes Rate Low
     public static float rCrimeRateLo(UsCrimeClass[] data) {
         int year = 0;
         float rCrimeRateLo = data[0].getRapeRate();
@@ -325,690 +325,591 @@ public class UsCrimeObject {
         }
         return year;
     }
-    //Violent Crimes High Total
+    //Robbery Crimes High Total
     public static int rbCrimeTotalHi(UsCrimeClass[] data) {
         int year = 0;
         int rbCrimeTotalHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getMurderRate() > vCrimeTotalHi) {
-                vCrimeTotalHi = crime.getViolentCrimeTotal();
+            if (crime.getRobberyTotal() > rbCrimeTotalHi) {
+                rbCrimeTotalHi = crime.getRobberyTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalHi;
+        return rbCrimeTotalHi;
     }
 
-    //Violent Crimes Total Low Year
-    public static int vCrimeTotalYearLo(UsCrimeClass[] data) {
+    //Robbery Crimes Total Low Year
+    public static int rbCrimeTotalYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearLo = data[0].getViolentCrimeTotal();
+        float rbCrimeTotalYearLo = data[0].getRobberyTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalYearLo) {
-                vCrimeTotalYearLo = crime.getViolentCrimeTotal();
+            if (crime.getRobberyTotal() < rbCrimeTotalYearLo) {
+                rbCrimeTotalYearLo = crime.getRobberyTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Total Low
-    public static int vCrimeTotalLo(UsCrimeClass[] data) {
+    //Robbery Crimes Total Low
+    public static int rbCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalLo = data[0].getViolentCrimeTotal();
+        int rbCrimeTotalLo = data[0].getRobberyTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalLo) {
-                vCrimeTotalLo = crime.getViolentCrimeTotal();
+            if (crime.getRobberyTotal() < rbCrimeTotalLo) {
+                rbCrimeTotalLo = crime.getRobberyTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalLo;
+        return rbCrimeTotalLo;
     }
 
-    //Violent Crimes Rate High Year
-    public static int vCrimeRateYearHi(UsCrimeClass[] data) {
+    //Robbery Crimes Rate High Year
+    public static int rbCrimeRateYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearHi = 0;
+        float rbCrimeRateYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateYearHi) {
-                vCrimeRateYearHi = crime.getViolentCrimeRate();
+            if (crime.getRobberyRate() > rbCrimeRateYearHi) {
+                rbCrimeRateYearHi = crime.getRobberyRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate high
-    public static float vCrimeRateHi(UsCrimeClass[] data) {
+    //Robbery Crimes Rate high
+    public static float rbCrimeRateHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateHi = 0;
+        float rbCrimeRateHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateHi) {
-                vCrimeRateHi = crime.getViolentCrimeRate();
+            if (crime.getRobberyRate() > rbCrimeRateHi) {
+                rbCrimeRateHi = crime.getRobberyRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateHi;
+        return rbCrimeRateHi;
     }
 
-    //Violent Crimes Rate low year
-    public static int vCrimeRateYearLo(UsCrimeClass[] data) {
+    //Robbery Crimes Rate low year
+    public static int rbCrimeRateYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearLo = data[0].getViolentCrimeRate();
+        float rbCrimeRateYearLo = data[0].getRobberyRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateYearLo) {
-                vCrimeRateYearLo = crime.getViolentCrimeRate();
+            if (crime.getRobberyRate() < rbCrimeRateYearLo) {
+                rbCrimeRateYearLo = crime.getRobberyRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate Low
-    public static float vCrimeRateLo(UsCrimeClass[] data) {
+    //Robbery Crimes Rate Low
+    public static float rbCrimeRateLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateLo = data[0].getViolentCrimeRate();
+        float rbCrimeRateLo = data[0].getRobberyRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateLo) {
-                vCrimeRateLo = crime.getViolentCrimeRate();
+            if (crime.getRobberyRate() < rbCrimeRateLo) {
+                rbCrimeRateLo = crime.getRobberyRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateLo;
+        return rbCrimeRateLo;
     }
 
-    //Violent Crimes Total High Year
-    public static int vCrimeTotalYearHi(UsCrimeClass[] data) {
+    //Assault Crimes Total High Year
+    public static int aCrimeTotalYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearHi = 0;
+        float aCrimeTotalYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() > vCrimeTotalYearHi) {
-                vCrimeTotalYearHi = crime.getViolentCrimeTotal();
+            if (crime.getAssaultTotal() > aCrimeTotalYearHi) {
+                aCrimeTotalYearHi = crime.getAssaultTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes High Total
-    public static int vCrimeTotalHi(UsCrimeClass[] data) {
+    //Assault Crimes High Total
+    public static int aCrimeTotalHi(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalHi = 0;
+        int aCrimeTotalHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getMurderRate() > vCrimeTotalHi) {
-                vCrimeTotalHi = crime.getViolentCrimeTotal();
+            if (crime.getAssaultTotal() > aCrimeTotalHi) {
+                aCrimeTotalHi = crime.getAssaultTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalHi;
+        return aCrimeTotalHi;
     }
 
-    //Violent Crimes Total Low Year
-    public static int vCrimeTotalYearLo(UsCrimeClass[] data) {
+    //Assault Crimes Total Low Year
+    public static int aCrimeTotalYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearLo = data[0].getViolentCrimeTotal();
+        float aCrimeTotalYearLo = data[0].getAssaultTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalYearLo) {
-                vCrimeTotalYearLo = crime.getViolentCrimeTotal();
+            if (crime.getAssaultTotal() < aCrimeTotalYearLo) {
+                aCrimeTotalYearLo = crime.getAssaultTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Total Low
-    public static int vCrimeTotalLo(UsCrimeClass[] data) {
+    //Assault Crimes Total Low
+    public static int aCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalLo = data[0].getViolentCrimeTotal();
+        int aCrimeTotalLo = data[0].getAssaultTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalLo) {
-                vCrimeTotalLo = crime.getViolentCrimeTotal();
+            if (crime.getAssaultTotal() < aCrimeTotalLo) {
+                aCrimeTotalLo = crime.getAssaultTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalLo;
+        return aCrimeTotalLo;
     }
 
-    //Violent Crimes Rate High Year
-    public static int vCrimeRateYearHi(UsCrimeClass[] data) {
+    //Assault Crimes Rate High Year
+    public static int aCrimeRateYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearHi = 0;
+        float aCrimeRateYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateYearHi) {
-                vCrimeRateYearHi = crime.getViolentCrimeRate();
+            if (crime.getAssaultRate() > aCrimeRateYearHi) {
+                aCrimeRateYearHi = crime.getAssaultRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate high
-    public static float vCrimeRateHi(UsCrimeClass[] data) {
+    //Assault Crimes Rate high
+    public static float aCrimeRateHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateHi = 0;
+        float aCrimeRateHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateHi) {
-                vCrimeRateHi = crime.getViolentCrimeRate();
+            if (crime.getAssaultRate() > aCrimeRateHi) {
+                aCrimeRateHi = crime.getAssaultRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateHi;
-    }
-
-    //Violent Crimes Rate low year
-    public static int vCrimeRateYearLo(UsCrimeClass[] data) {
-        int year = 0;
-        float vCrimeRateYearLo = data[0].getViolentCrimeRate();
-        for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateYearLo) {
-                vCrimeRateYearLo = crime.getViolentCrimeRate();
-                year = crime.getYear();
-            }
-        }
-        return year;
-    }
-    //Violent Crimes Rate Low
-    public static float vCrimeRateLo(UsCrimeClass[] data) {
-        int year = 0;
-        float vCrimeRateLo = data[0].getViolentCrimeRate();
-        for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateLo) {
-                vCrimeRateLo = crime.getViolentCrimeRate();
-                year = crime.getYear();
-            }
-        }
-        return vCrimeRateLo;
-    }
-
-    //Violent Crimes Total High Year
-    public static int vCrimeTotalYearHi(UsCrimeClass[] data) {
-        int year = 0;
-        float vCrimeTotalYearHi = 0;
-        for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() > vCrimeTotalYearHi) {
-                vCrimeTotalYearHi = crime.getViolentCrimeTotal();
-                year = crime.getYear();
-            }
-        }
-        return year;
-    }
-    //Violent Crimes High Total
-    public static int vCrimeTotalHi(UsCrimeClass[] data) {
-        int year = 0;
-        int vCrimeTotalHi = 0;
-        for (UsCrimeClass crime : data) {
-            if (crime.getMurderRate() > vCrimeTotalHi) {
-                vCrimeTotalHi = crime.getViolentCrimeTotal();
-                year = crime.getYear();
-            }
-        }
-        return vCrimeTotalHi;
-    }
-
-    //Violent Crimes Total Low Year
-    public static int vCrimeTotalYearLo(UsCrimeClass[] data) {
-        int year = 0;
-        float vCrimeTotalYearLo = data[0].getViolentCrimeTotal();
-        for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalYearLo) {
-                vCrimeTotalYearLo = crime.getViolentCrimeTotal();
-                year = crime.getYear();
-            }
-        }
-        return year;
-    }
-    //Violent Crimes Total Low
-    public static int vCrimeTotalLo(UsCrimeClass[] data) {
-        int year = 0;
-        int vCrimeTotalLo = data[0].getViolentCrimeTotal();
-        for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalLo) {
-                vCrimeTotalLo = crime.getViolentCrimeTotal();
-                year = crime.getYear();
-            }
-        }
-        return vCrimeTotalLo;
-    }
-
-    //Violent Crimes Rate High Year
-    public static int vCrimeRateYearHi(UsCrimeClass[] data) {
-        int year = 0;
-        float vCrimeRateYearHi = 0;
-        for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateYearHi) {
-                vCrimeRateYearHi = crime.getViolentCrimeRate();
-                year = crime.getYear();
-            }
-        }
-        return year;
-    }
-    //Violent Crimes Rate high
-    public static float vCrimeRateHi(UsCrimeClass[] data) {
-        int year = 0;
-        float vCrimeRateHi = 0;
-        for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateHi) {
-                vCrimeRateHi = crime.getViolentCrimeRate();
-                year = crime.getYear();
-            }
-        }
-        return vCrimeRateHi;
+        return aCrimeRateHi;
     }
 
     //Violent Crimes Rate low year
-    public static int vCrimeRateYearLo(UsCrimeClass[] data) {
+    public static int aCrimeRateYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearLo = data[0].getViolentCrimeRate();
+        float aCrimeRateYearLo = data[0].getAssaultRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateYearLo) {
-                vCrimeRateYearLo = crime.getViolentCrimeRate();
+            if (crime.getAssaultRate() < aCrimeRateYearLo) {
+                aCrimeRateYearLo = crime.getAssaultRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate Low
-    public static float vCrimeRateLo(UsCrimeClass[] data) {
+    //Assault Crimes Rate Low
+    public static float aCrimeRateLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateLo = data[0].getViolentCrimeRate();
+        float aCrimeRateLo = data[0].getAssaultRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateLo) {
-                vCrimeRateLo = crime.getViolentCrimeRate();
+            if (crime.getAssaultRate() < aCrimeRateLo) {
+                aCrimeRateLo = crime.getAssaultRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateLo;
+        return aCrimeRateLo;
     }
 
-    //Violent Crimes Total High Year
-    public static int vCrimeTotalYearHi(UsCrimeClass[] data) {
+    //Property Crimes Total High Year
+    public static int pCrimeTotalYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearHi = 0;
+        float pCrimeTotalYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() > vCrimeTotalYearHi) {
-                vCrimeTotalYearHi = crime.getViolentCrimeTotal();
+            if (crime.getPropertyTotal() > pCrimeTotalYearHi) {
+                pCrimeTotalYearHi = crime.getPropertyTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes High Total
-    public static int vCrimeTotalHi(UsCrimeClass[] data) {
+    //Property Crimes High Total
+    public static int pCrimeTotalHi(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalHi = 0;
+        int pCrimeTotalHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getMurderRate() > vCrimeTotalHi) {
-                vCrimeTotalHi = crime.getViolentCrimeTotal();
+            if (crime.getPropertyTotal() > pCrimeTotalHi) {
+                pCrimeTotalHi = crime.getPropertyTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalHi;
+        return pCrimeTotalHi;
     }
 
-    //Violent Crimes Total Low Year
-    public static int vCrimeTotalYearLo(UsCrimeClass[] data) {
+    //Property Crimes Total Low Year
+    public static int pCrimeTotalYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearLo = data[0].getViolentCrimeTotal();
+        float pCrimeTotalYearLo = data[0].getPropertyTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalYearLo) {
-                vCrimeTotalYearLo = crime.getViolentCrimeTotal();
+            if (crime.getPropertyTotal() < pCrimeTotalYearLo) {
+                pCrimeTotalYearLo = crime.getPropertyTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Total Low
-    public static int vCrimeTotalLo(UsCrimeClass[] data) {
+    //Property Crimes Total Low
+    public static int pCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalLo = data[0].getViolentCrimeTotal();
+        int pCrimeTotalLo = data[0].getPropertyTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalLo) {
-                vCrimeTotalLo = crime.getViolentCrimeTotal();
+            if (crime.getPropertyTotal() < pCrimeTotalLo) {
+                pCrimeTotalLo = crime.getPropertyTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalLo;
+        return pCrimeTotalLo;
     }
 
-    //Violent Crimes Rate High Year
-    public static int vCrimeRateYearHi(UsCrimeClass[] data) {
+    //Property Crimes Rate High Year
+    public static int pCrimeRateYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearHi = 0;
+        float pCrimeRateYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateYearHi) {
-                vCrimeRateYearHi = crime.getViolentCrimeRate();
+            if (crime.getPropertyRate() > pCrimeRateYearHi) {
+                pCrimeRateYearHi = crime.getPropertyRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate high
-    public static float vCrimeRateHi(UsCrimeClass[] data) {
+    //Property Crimes Rate high
+    public static float pCrimeRateHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateHi = 0;
+        float pCrimeRateHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateHi) {
-                vCrimeRateHi = crime.getViolentCrimeRate();
+            if (crime.getPropertyRate() > pCrimeRateHi) {
+                pCrimeRateHi = crime.getPropertyRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateHi;
+        return pCrimeRateHi;
     }
 
-    //Violent Crimes Rate low year
-    public static int vCrimeRateYearLo(UsCrimeClass[] data) {
+    //Property Crimes Rate low year
+    public static int pCrimeRateYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearLo = data[0].getViolentCrimeRate();
+        float pCrimeRateYearLo = data[0].getPropertyRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateYearLo) {
-                vCrimeRateYearLo = crime.getViolentCrimeRate();
+            if (crime.getPropertyRate() < pCrimeRateYearLo) {
+                pCrimeRateYearLo = crime.getPropertyRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate Low
-    public static float vCrimeRateLo(UsCrimeClass[] data) {
+    //Property Crimes Rate Low
+    public static float pCrimeRateLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateLo = data[0].getViolentCrimeRate();
+        float pCrimeRateLo = data[0].getPropertyRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateLo) {
-                vCrimeRateLo = crime.getViolentCrimeRate();
+            if (crime.getPropertyRate() < pCrimeRateLo) {
+                pCrimeRateLo = crime.getPropertyRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateLo;
+        return pCrimeRateLo;
     }
 
-    //Violent Crimes Total High Year
-    public static int vCrimeTotalYearHi(UsCrimeClass[] data) {
+    //Burglary Crimes Total High Year
+    public static int bCrimeTotalYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearHi = 0;
+        float bCrimeTotalYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() > vCrimeTotalYearHi) {
-                vCrimeTotalYearHi = crime.getViolentCrimeTotal();
+            if (crime.getBurglaryTotal() > bCrimeTotalYearHi) {
+                bCrimeTotalYearHi = crime.getBurglaryTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes High Total
-    public static int vCrimeTotalHi(UsCrimeClass[] data) {
+    //Burglary Crimes High Total
+    public static int bCrimeTotalHi(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalHi = 0;
+        int bCrimeTotalHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getMurderRate() > vCrimeTotalHi) {
-                vCrimeTotalHi = crime.getViolentCrimeTotal();
+            if (crime.getBurglaryTotal() > bCrimeTotalHi) {
+                bCrimeTotalHi = crime.getBurglaryTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalHi;
+        return bCrimeTotalHi;
     }
 
-    //Violent Crimes Total Low Year
-    public static int vCrimeTotalYearLo(UsCrimeClass[] data) {
+    //Burglary Crimes Total Low Year
+    public static int bCrimeTotalYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearLo = data[0].getViolentCrimeTotal();
+        float bCrimeTotalYearLo = data[0].getBurglaryTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalYearLo) {
-                vCrimeTotalYearLo = crime.getViolentCrimeTotal();
+            if (crime.getBurglaryTotal() < bCrimeTotalYearLo) {
+                bCrimeTotalYearLo = crime.getBurglaryTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Total Low
-    public static int vCrimeTotalLo(UsCrimeClass[] data) {
+    //Burglary Crimes Total Low
+    public static int bCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalLo = data[0].getViolentCrimeTotal();
+        int bCrimeTotalLo = data[0].getBurglaryTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalLo) {
-                vCrimeTotalLo = crime.getViolentCrimeTotal();
+            if (crime.getBurglaryTotal() < bCrimeTotalLo) {
+                bCrimeTotalLo = crime.getBurglaryTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalLo;
+        return bCrimeTotalLo;
     }
 
-    //Violent Crimes Rate High Year
-    public static int vCrimeRateYearHi(UsCrimeClass[] data) {
+    //Burglary Crimes Rate High Year
+    public static int bCrimeRateYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearHi = 0;
+        float bCrimeRateYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateYearHi) {
-                vCrimeRateYearHi = crime.getViolentCrimeRate();
+            if (crime.getBurglaryRate() > bCrimeRateYearHi) {
+                bCrimeRateYearHi = crime.getBurglaryRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate high
-    public static float vCrimeRateHi(UsCrimeClass[] data) {
+    //Burglary Crimes Rate high
+    public static float bCrimeRateHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateHi = 0;
+        float bCrimeRateHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateHi) {
-                vCrimeRateHi = crime.getViolentCrimeRate();
+            if (crime.getBurglaryRate() > bCrimeRateHi) {
+                bCrimeRateHi = crime.getBurglaryRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateHi;
+        return bCrimeRateHi;
     }
 
-    //Violent Crimes Rate low year
-    public static int vCrimeRateYearLo(UsCrimeClass[] data) {
+    //Burglary Crimes Rate low year
+    public static int bCrimeRateYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearLo = data[0].getViolentCrimeRate();
+        float bCrimeRateYearLo = data[0].getBurglaryRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateYearLo) {
-                vCrimeRateYearLo = crime.getViolentCrimeRate();
+            if (crime.getBurglaryRate() < bCrimeRateYearLo) {
+                bCrimeRateYearLo = crime.getBurglaryRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate Low
-    public static float vCrimeRateLo(UsCrimeClass[] data) {
+    //Burglary Crimes Rate Low
+    public static float bCrimeRateLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateLo = data[0].getViolentCrimeRate();
+        float bCrimeRateLo = data[0].getBurglaryRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateLo) {
-                vCrimeRateLo = crime.getViolentCrimeRate();
+            if (crime.getBurglaryRate() < bCrimeRateLo) {
+                bCrimeRateLo = crime.getBurglaryRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateLo;
+        return bCrimeRateLo;
     }
 
-    //Violent Crimes Total High Year
-    public static int vCrimeTotalYearHi(UsCrimeClass[] data) {
+    //Larceny Crimes Total High Year
+    public static int lCrimeTotalYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearHi = 0;
+        float lCrimeTotalYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() > vCrimeTotalYearHi) {
-                vCrimeTotalYearHi = crime.getViolentCrimeTotal();
+            if (crime.getLarcenyTotal() > lCrimeTotalYearHi) {
+                lCrimeTotalYearHi = crime.getLarcenyTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes High Total
-    public static int vCrimeTotalHi(UsCrimeClass[] data) {
+    //Larceny Crimes High Total
+    public static int lCrimeTotalHi(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalHi = 0;
+        int lCrimeTotalHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getMurderRate() > vCrimeTotalHi) {
-                vCrimeTotalHi = crime.getViolentCrimeTotal();
+            if (crime.getLarcenyTotal() > lCrimeTotalHi) {
+                lCrimeTotalHi = crime.getLarcenyTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalHi;
+        return lCrimeTotalHi;
     }
 
-    //Violent Crimes Total Low Year
-    public static int vCrimeTotalYearLo(UsCrimeClass[] data) {
+    //Larceny Crimes Total Low Year
+    public static int lCrimeTotalYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearLo = data[0].getViolentCrimeTotal();
+        float lCrimeTotalYearLo = data[0].getLarcenyTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalYearLo) {
-                vCrimeTotalYearLo = crime.getViolentCrimeTotal();
+            if (crime.getLarcenyTotal() < lCrimeTotalYearLo) {
+                lCrimeTotalYearLo = crime.getLarcenyTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Total Low
-    public static int vCrimeTotalLo(UsCrimeClass[] data) {
+    //Larceny Crimes Total Low
+    public static int lCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalLo = data[0].getViolentCrimeTotal();
+        int lCrimeTotalLo = data[0].getLarcenyTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalLo) {
-                vCrimeTotalLo = crime.getViolentCrimeTotal();
+            if (crime.getLarcenyTotal() < lCrimeTotalLo) {
+                lCrimeTotalLo = crime.getLarcenyTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalLo;
+        return lCrimeTotalLo;
     }
 
-    //Violent Crimes Rate High Year
-    public static int vCrimeRateYearHi(UsCrimeClass[] data) {
+    //Larceny Crimes Rate High Year
+    public static int lCrimeRateYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearHi = 0;
+        float lCrimeRateYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateYearHi) {
-                vCrimeRateYearHi = crime.getViolentCrimeRate();
+            if (crime.getLarcenyRate() > lCrimeRateYearHi) {
+                lCrimeRateYearHi = crime.getLarcenyRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate high
-    public static float vCrimeRateHi(UsCrimeClass[] data) {
+    //Larceny Crimes Rate high
+    public static float lCrimeRateHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateHi = 0;
+        float lCrimeRateHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateHi) {
-                vCrimeRateHi = crime.getViolentCrimeRate();
+            if (crime.getLarcenyRate() > lCrimeRateHi) {
+                lCrimeRateHi = crime.getLarcenyRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateHi;
+        return lCrimeRateHi;
     }
 
-    //Violent Crimes Rate low year
-    public static int vCrimeRateYearLo(UsCrimeClass[] data) {
+    //Larceny Crimes Rate low year
+    public static int lCrimeRateYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearLo = data[0].getViolentCrimeRate();
+        float lCrimeRateYearLo = data[0].getLarcenyRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateYearLo) {
-                vCrimeRateYearLo = crime.getViolentCrimeRate();
+            if (crime.getLarcenyeRate() < lCrimeRateYearLo) {
+                lCrimeRateYearLo = crime.getLarcenyRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate Low
-    public static float vCrimeRateLo(UsCrimeClass[] data) {
+    //Larceny Crimes Rate Low
+    public static float lCrimeRateLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateLo = data[0].getViolentCrimeRate();
+        float lCrimeRateLo = data[0].getLarcenyRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateLo) {
-                vCrimeRateLo = crime.getViolentCrimeRate();
+            if (crime.getLarcenyRate() < lCrimeRateLo) {
+                lCrimeRateLo = crime.getLarcenyRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateLo;
+        return lCrimeRateLo;
     }
 
-    //Violent Crimes Total High Year
-    public static int vCrimeTotalYearHi(UsCrimeClass[] data) {
+    //MotorVehicle Crimes Total High Year
+    public static int mvCrimeTotalYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearHi = 0;
+        float mvCrimeTotalYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() > vCrimeTotalYearHi) {
-                vCrimeTotalYearHi = crime.getViolentCrimeTotal();
+            if (crime.getMotorVehicleTotal() > mvCrimeTotalYearHi) {
+                mvCrimeTotalYearHi = crime.getMotorVehicleTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes High Total
-    public static int vCrimeTotalHi(UsCrimeClass[] data) {
+    //MotorVehicle Crimes High Total
+    public static int mvCrimeTotalHi(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalHi = 0;
+        int mvCrimeTotalHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getMurderRate() > vCrimeTotalHi) {
-                vCrimeTotalHi = crime.getViolentCrimeTotal();
+            if (crime.getMotorVehicleTotal() > mvCrimeTotalHi) {
+                mvCrimeTotalHi = crime.getMotorVehicleTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalHi;
+        return mvCrimeTotalHi;
     }
 
-    //Violent Crimes Total Low Year
-    public static int vCrimeTotalYearLo(UsCrimeClass[] data) {
+    //MotorVehicle Crimes Total Low Year
+    public static int mvCrimeTotalYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeTotalYearLo = data[0].getViolentCrimeTotal();
+        float mvCrimeTotalYearLo = data[0].getMotorVehicleTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalYearLo) {
-                vCrimeTotalYearLo = crime.getViolentCrimeTotal();
+            if (crime.getMotorVehicleTotal() < mvCrimeTotalYearLo) {
+                mvCrimeTotalYearLo = crime.getMotorVehicleTotal();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Total Low
-    public static int vCrimeTotalLo(UsCrimeClass[] data) {
+    //MotorVehicle Crimes Total Low
+    public static int mvCrimeTotalLo(UsCrimeClass[] data) {
         int year = 0;
-        int vCrimeTotalLo = data[0].getViolentCrimeTotal();
+        int mvCrimeTotalLo = data[0].getMotorVehicleTotal();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeTotal() < vCrimeTotalLo) {
-                vCrimeTotalLo = crime.getViolentCrimeTotal();
+            if (crime.getMotorVehicleTotal() < mvCrimeTotalLo) {
+                mvCrimeTotalLo = crime.getMotorVehicleTotal();
                 year = crime.getYear();
             }
         }
-        return vCrimeTotalLo;
+        return mvCrimeTotalLo;
     }
 
-    //Violent Crimes Rate High Year
-    public static int vCrimeRateYearHi(UsCrimeClass[] data) {
+    //MotorVehicle Crimes Rate High Year
+    public static int mvCrimeRateYearHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearHi = 0;
+        float mvCrimeRateYearHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateYearHi) {
-                vCrimeRateYearHi = crime.getViolentCrimeRate();
+            if (crime.getMotorVehicleRate() > mvCrimeRateYearHi) {
+                mvCrimeRateYearHi = crime.getMotorVehicleRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate high
-    public static float vCrimeRateHi(UsCrimeClass[] data) {
+    //MotorVehicle Crimes Rate high
+    public static float mvCrimeRateHi(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateHi = 0;
+        float mvCrimeRateHi = 0;
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() > vCrimeRateHi) {
-                vCrimeRateHi = crime.getViolentCrimeRate();
+            if (crime.getMotorVehicleRate() > mvCrimeRateHi) {
+                mvCrimeRateHi = crime.getMotorVehicleRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateHi;
+        return mvCrimeRateHi;
     }
 
-    //Violent Crimes Rate low year
-    public static int vCrimeRateYearLo(UsCrimeClass[] data) {
+    //MotorVehicle Crimes Rate low year
+    public static int mvCrimeRateYearLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateYearLo = data[0].getViolentCrimeRate();
+        float mvCrimeRateYearLo = data[0].getMotorVehicleRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateYearLo) {
-                vCrimeRateYearLo = crime.getViolentCrimeRate();
+            if (crime.getMotorVehicleRate() < mvCrimeRateYearLo) {
+                mvCrimeRateYearLo = crime.getMotorVehicleRate();
                 year = crime.getYear();
             }
         }
         return year;
     }
-    //Violent Crimes Rate Low
-    public static float vCrimeRateLo(UsCrimeClass[] data) {
+    //MotorVehicle Crimes Rate Low
+    public static float mvCrimeRateLo(UsCrimeClass[] data) {
         int year = 0;
-        float vCrimeRateLo = data[0].getViolentCrimeRate();
+        float mvCrimeRateLo = data[0].getMotorVehicleRate();
         for (UsCrimeClass crime : data) {
-            if (crime.getViolentCrimeRate() < vCrimeRateLo) {
-                vCrimeRateLo = crime.getViolentCrimeRate();
+            if (crime.getMotorVehicleRate() < mvCrimeRateLo) {
+                mvCrimeRateLo = crime.getMotorVehicleRate();
                 year = crime.getYear();
             }
         }
-        return vCrimeRateLo;
+        return mvCrimeRateLo;
     }
+}
